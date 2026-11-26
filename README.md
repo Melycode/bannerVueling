@@ -2,9 +2,7 @@
 
 A small script, written in plain JavaScript, that shows a newsletter pop-up on the [Vueling](https://www.vueling.com/es) home page. It uses Vueling's colors and font so it looks like part of the site, and it never touches Vueling's own code: everything is added from the browser console.
 
-This is a practice project that imitates a real **CRO** task (Conversion Rate Optimization: small changes to a website to get more people to do something, like subscribing to a newsletter). I made it for my Web Application Development studies (DAW).
-
----
+This is a practice project that imitates a real **CRO** task (Conversion Rate Optimization: small changes to a website to get more people to do something, like subscribing to a newsletter). 
 
 ## How to use
 
@@ -13,10 +11,43 @@ This is a practice project that imitates a real **CRO** task (Conversion Rate Op
 3. If Chrome won't let you paste, type `allow pasting` and press Enter.
 4. Copy everything inside `bannerVueling.js`, paste it into the Console and press Enter.
 5. Wait 3 seconds. The pop-up slides in from the right.
+6. Want to see it again? Reload the page and repeat the steps.
 
-Want to see it again? Reload the page and repeat the steps.
+## Screenshots of the deployed site
 
----
+| 1. Initial state (button disabled) | 2. Valid email (button enabled) | 3. Redirect to official newsletter |
+| :---: | :---: | :---: |
+| <img width="220" alt="img1" src="https://github.com/user-attachments/assets/4e9269c8-1066-4b54-b522-33e3156c471b" />| <img width="220" alt="img2" src="https://github.com/user-attachments/assets/737273d7-6c6c-44d2-8e21-d34da9ebacb9" />|<img width="220" alt="img3" src="https://github.com/user-attachments/assets/1c5f80d1-7978-458d-be9e-d75f8e80287d" />|
+
+## Technologies
+
+- JavaScript (Vanilla JS)
+- CSS (added from JavaScript)
+- Git and GitHub
+
+## Features
+
+- The whole pop-up is created with JavaScript.
+- The styles come from the script itself, so nothing else is needed.
+- It follows Vueling's look: colors, font and rounded buttons.
+- It checks the email format while you type and tells you if it's right or wrong.
+- The subscribe button stays off until the email is valid.
+- It appears 3 seconds after you run the code and slides in from the right.
+- When you close it, it slides out and leaves the page exactly as it was.
+- If you run the script twice, you still get only one pop-up.
+
+## Design
+
+| Element | Value |
+| :--- | :--- |
+| Yellow (top line and button) | <img src="https://placehold.co/14x14/FFF000/FFF000.png" width="14" height="14" alt="Yellow" /> `#FFF000` |
+| Black (title and text) | <img src="https://placehold.co/14x14/000000/000000.png" width="14" height="14" alt="Black" /> `#000000` |
+| White (background) | <img src="https://placehold.co/14x14/FFFFFF/CCCCCC.png" width="14" height="14" alt="White" /> `#FFFFFF` |
+| Dark gray (description) | <img src="https://placehold.co/14x14/333333/333333.png" width="14" height="14" alt="Dark gray" /> `#333333` |
+| Light gray (email field border) | <img src="https://placehold.co/14x14/CCCCCC/CCCCCC.png" width="14" height="14" alt="Light gray" /> `#CCCCCC` |
+| Green / red (email feedback) | <img src="https://placehold.co/14x14/198754/198754.png" width="14" height="14" alt="Green" /> `#198754` / <img src="https://placehold.co/14x14/DC3545/DC3545.png" width="14" height="14" alt="Red" /> `#DC3545` |
+| Font | `VuelingPilcrow, Arial, sans-serif` |
+| Button corners | `1.375rem` |
 
 ## What the exercise asked for
 
@@ -33,38 +64,6 @@ Want to see it again? Reload the page and repeat the steps.
 | Slide in from the right | A CSS transition, started by JavaScript |
 | Don't show it twice if the script runs twice | The script checks first if the banner already exists |
 | One `.js` file, ready to paste | That's all there is: no `.html` or `.css` files |
-
----
-
-## Features
-
-- The whole pop-up is created with JavaScript.
-- The styles come from the script itself, so nothing else is needed.
-- It follows Vueling's look: colors, font and rounded buttons.
-- It checks the email format while you type and tells you if it's right or wrong.
-- The subscribe button stays off until the email is valid.
-- It appears 3 seconds after you run the code and slides in from the right.
-- When you close it, it slides out and leaves the page exactly as it was.
-- If you run the script twice, you still get only one pop-up.
-
----
-
-## Design
-
-| Element | Value |
-| :--- | :--- |
-| Yellow (top line and button) | `#FFF000` |
-| Black (title and text) | `#000000` |
-| White (background) | `#FFFFFF` |
-| Dark gray (description) | `#333333` |
-| Light gray (email field border) | `#CCCCCC` |
-| Green / red (email feedback) | `#198754` / `#DC3545` |
-| Font | `VuelingPilcrow, Arial, sans-serif` |
-| Button corners | `1.375rem` |
-
-The font is already loaded by the Vueling website, so I just reuse it. If it's not available, the browser uses Arial.
-
----
 
 ## Code structure
 
@@ -83,44 +82,10 @@ The font is already loaded by the Vueling website, so I just reuse it. If it's n
 2. `setTimeout` waits 3000 ms (3 seconds) after the code runs.
 3. Then `showBanner()` adds a CSS class that moves the pop-up back to its place. Since the transition is already set, the browser animates the move by itself.
 
----
-
-## Rules I followed
-
-- **Names:** everything (classes, ids, variables, functions) is in English and in camelCase, like `promoBanner` or `isValidEmail`.
-- **Simple CSS:** one class per rule, no long chains of selectors and no `:root` variables. Each style stays close to the thing it styles, and it can't interfere with the Vueling website.
-- **Meaningful HTML:** I used tags that describe their purpose (`aside`, `header`, `form`, `label`, `footer`) instead of generic boxes.
-- **Accessible from the start:** screen readers can find the title, the email field has a hidden label, the close button has a description, and the feedback message is read out loud when it changes.
-- **Images:** the pop-up doesn't use any, so there was nothing to optimize.
-
----
-
-## Technologies
-
-- JavaScript (Vanilla JS)
-- CSS (added from JavaScript)
-- Git and GitHub
-
----
-
 ## Good to know
 
 - The email is only checked, never saved or sent. The official newsletter page can't be filled in from outside, so the button just takes you there.
 - The script only lives in the page until you reload it. It's an experiment, not a browser extension.
-
----
-
-## Preview
-
-**1. Initial state (empty field, subscribe button disabled):**
-
-
-**2. Valid email (green confirmation message, subscribe button enabled):**
-
-
-**3. Redirect (clicking the CTA opens Vueling's official newsletter page):**
-
----
 
 ## Author
 
