@@ -106,11 +106,13 @@
                 border-color: #000000;
             }
 
-            .inputValid {
+            .inputValid,
+            .inputValid:focus {
                 border-color: #198754;
             }
 
-            .inputInvalid {
+            .inputInvalid,
+            .inputInvalid:focus {
                 border-color: #DC3545;
             }
 
