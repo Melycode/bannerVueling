@@ -13,11 +13,11 @@ This is a practice project that imitates a real **CRO** task (Conversion Rate Op
 5. Wait 3 seconds. The pop-up slides in from the right.
 6. Want to see it again? Reload the page and repeat the steps.
 
-## Screenshots of the deployed site
+## Screenshots of banner
 
 | 1. Initial state (button disabled) | 2. Valid email (button enabled) | 3. Redirect to official newsletter |
 | :---: | :---: | :---: |
-| <img width="220" alt="img1" src="https://github.com/user-attachments/assets/4e9269c8-1066-4b54-b522-33e3156c471b" />| <img width="220" alt="img2" src="https://github.com/user-attachments/assets/737273d7-6c6c-44d2-8e21-d34da9ebacb9" />|<img width="220" alt="img3" src="https://github.com/user-attachments/assets/1c5f80d1-7978-458d-be9e-d75f8e80287d" />|
+| <img width="220" alt="Initial State" src="https://github.com/user-attachments/assets/2c7acf06-8849-4710-99aa-2bf65bd87549" />| <img width="220" alt="Valid email" src="https://github.com/user-attachments/assets/bbdd585f-f58f-4674-aa6f-9f13d03f3e98" />|<img width="220" alt="Redirect to official web" src="https://github.com/user-attachments/assets/1c5f80d1-7978-458d-be9e-d75f8e80287d" />|
 
 ## Technologies
 
